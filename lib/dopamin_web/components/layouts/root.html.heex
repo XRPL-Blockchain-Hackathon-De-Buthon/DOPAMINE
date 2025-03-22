@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title default="Dopamin" suffix=" · Phoenix Framework">
+      {assigns[:page_title]}
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="bg-white">
+    <!-- 헤더 -->
+    <header class="fixed w-full bg-black bg-opacity-95 py-3 px-6 md:px-16 flex justify-between items-center z-50">
+      <a href="/" class="flex items-center">
+        <div class="w-4 h-4 bg-yellow-400 mr-2"></div>
+        <span class="font-bold text-white">도파민</span>
+      </a>
+
+      <div class="flex items-center">
+        <%= if assigns[:current_user] do %>
+          <!-- 메타마스크 지갑 영역 -->
+          <div id="metamask-header" phx-hook="MetaMaskHeader" class="flex items-center mr-6">
+            <span id="wallet-info" class="text-sm text-gray-300">지갑 연결 필요</span>
+            <span id="coin-value" class="ml-2 text-sm font-medium text-yellow-400 hidden">
+              0.0000 ETH
+            </span>
+            <button
+              id="connect-wallet-btn"
+              class="ml-2 bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1 rounded text-xs font-bold transition-colors"
+            >
+              지갑 연결
+            </button>
+          </div>
+        <% end %>
+        <!-- 사용자 정보 영역 -->
+        <%= if assigns[:current_user] do %>
+          <div class="flex items-center gap-4">
+            <span class="text-sm text-gray-300">{@current_user.email}</span>
+            <.link href={~p"/users/settings"} class="text-sm text-gray-300 hover:text-gray-100">
+              설정
+            </.link>
+            <.link
+              href={~p"/users/log_out"}
+              method="delete"
+              class="bg-yellow-400 text-black px-4 py-2 rounded text-sm font-bold"
+            >
+              로그아웃
+            </.link>
+          </div>
+        <% else %>
+          <div class="flex items-center gap-4">
+            <.link href={~p"/users/register"} class="text-sm text-gray-300 hover:text-gray-100">
+              회원가입
+            </.link>
+            <.link
+              href={~p"/users/log_in"}
+              class="bg-yellow-400 text-black px-4 py-2 rounded text-sm font-bold"
+            >
+              로그인
+            </.link>
+          </div>
+        <% end %>
+      </div>
+    </header>
+    <main>
+      <.flash_group flash={@flash} />
+      {@inner_content}
+    </main>
+    <footer class="py-8 text-center text-xs text-gray-600 bg-black">
+      <p>© 2025 All rights reserved . 도파민</p>
+      <div class="flex justify-center mt-4 space-x-4">
+        <a href="#" class="text-gray-600">이용약관</a>
+        <a href="#" class="text-gray-600">개인정보처리방침</a>
+        <a href="#" class="text-gray-600">고객센터</a>
+      </div>
+    </footer>
+  </body>
+</html>
