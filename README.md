@@ -1,18 +1,33 @@
-# Dopamin
+XRP 예측 시장 플랫폼
 
-To start your Phoenix server:
+#목차 시장 분석 및 기회 차별화된 시장 포지셔닝 주요 기능 게임 규칙 워크차트 DEMO VIDEO 비즈니스 모델 성장 전략
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+#시장 분석 암호화폐 사용자: 전 세계 약 6억1700만 명, 연간 34% XRP 보유자: 약 601만 명의 잠재적 초기 사용자
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+#시장 기회 예측 시장의 현재 상황 글로벌 시장 규모 2024년: 180억 2천만 달러 2032년 예상: 953억 달러 예상 CAGR: 23.1% (2024-2032) 사용자 증가: 전통 금융에서 암호화폐 기반 예측 시장으로 사용자 이동 추세 주요 플레이어: Augur, Polymarket, Kalshi, PredictIt
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+#기술적 우위 XRP의 실질적 이점 활용 초당 1,500+ 거래 처리: 대규모 동시 베팅 처리 가능 3-5초 결제 완료: 즉각적인 참여와 보상 낮은 거래 비용: 소액 베팅도 경제적 탄소 중립 합의 메커니즘: 친환경적 블록체인 솔루션 XRPL 후크: 커스텀 예측 계약을 위한 스마트 컨트랙트 기능
 
-## Learn more
+#차별화된 시장 포지셔닝 틈새 시장 집중 특화된 예측 카테고리: 금융 시장 (암호화폐 가격, 주식 실적) EVM상의 W-XRP 발행 자체 컨트랙트 개발
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+#주요기능
+
+사용자 배팅 시 실시간 가상화폐 시세 반영
+전체 배팅된 가상화폐의 수익률 일괄 계산
+예측 손해/수익률과 가장 근사치의 수치 제공
+고객에게 contract 주소 내 모든 코인 전송
+websocket으로 실시간 배팅 게임 서비스 제공
+smart contract통한 탈중앙 배팅 및 수익 분배 알고리즘 개발
+#게임 규칙
+
+참가자 예측 제출/ XRP 투자 참가자는 XRP 가격을 예측하여 시스템에 제출./XRP에 일정 금액을 투자.
+평균 예측값 계산 모든 참가자의 시장참여시점 기준으로 평균 예측값(평단가) 을 계산. 가장 근접한 예측을 한 참가자들은 100%의 보상금을 받을 자격이 있습니다.
+보상 분배 (투자액 반영) 100% 보상 분배: 근사값에 가까운 예측을 한 사람들에게 보상금을 투자액에 비례하여 나눕니다.
+실제 XRP 가격 확정 후 보상 지급 게임 종료 후 실제 XRP 시장 가격이 확정되면, 예측값과의 차이에 따라 보상이 지급됩니다.
+#비즈니스 모델 계층형 멤버십 수수료: 기본: 10 XRP (연간), 거래 수수료 3% 프로: 100 XRP (연간), 거래 수수료 1.5% 프리미엄: 500 XRP (연간), 거래 수수료 0.75% 유동성 제공자 인센티브: 시장 조성자에게 수수료 공유
+
+#성장 전략
+
+초기 사용자 확보 (1-6개월) Ripple 및 XRP 커뮤니티 타겟팅 초기 사용자 보상 프로그램 (거래 수수료 면제) 영향력 있는 암호화폐 분석가와 파트너십
+
+사용자 유치(6-18개월) 경쟁사보다 높은 레퍼럴 리워드 방식 도입
